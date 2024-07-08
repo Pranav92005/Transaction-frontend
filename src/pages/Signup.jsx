@@ -27,7 +27,7 @@ const navigate=useNavigate();
         <div className="pt-4">
           <Button label={"Sign up"}  onclick={
             ()=>{
-              axios.post('http://localhost:3000/api/v1/user/signup',{username:email,firstname:firstName,lastname:lastName,password:password}).then((res)=>{
+              axios.post('https://transaction-backend-4rk4.onrender.com/api/v1/user/signup',{username:email,firstname:firstName,lastname:lastName,password:password}).then((res)=>{
                 
                 
                 const token=res.data.token;

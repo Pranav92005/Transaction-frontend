@@ -13,7 +13,7 @@ const [search, setSearch] = useState('');
     
 
     useEffect(() => {
-axios.get(`http://localhost:3000/api/v1/user/bulk?filter=${search}`,{headers:{Authorization:token}}).then((res)=>{ 
+axios.get(`https://transaction-backend-4rk4.onrender.com/api/v1/user/bulk?filter=${search}`,{headers:{Authorization:token}}).then((res)=>{ 
         
         
         setUsers(res.data.user);

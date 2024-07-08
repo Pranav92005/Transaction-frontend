@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Balance() {
     const[balance,setBalance]=useState(0);
     useEffect(() => {
-        axios.get("http://localhost:3000/api/v1/account/balance" ,{headers:{Authorization:"Bearer "+localStorage.getItem("token")}}).then((res)=>{
+        axios.get("https://transaction-backend-4rk4.onrender.com/api/v1/account/balance" ,{headers:{Authorization:"Bearer "+localStorage.getItem("token")}}).then((res)=>{
         
             setBalance(res.data.balance);
         

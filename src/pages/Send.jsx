@@ -10,7 +10,7 @@ export  function Send() {
     const name=searchParams.get('name');
     const navigate=useNavigate();
     function transaction(){
-        axios.post("http://localhost:3000/api/v1/account/transfer",{amount:amount,to:id},{headers:{Authorization:"Bearer "+localStorage.getItem("token")}}).then((res)=>{
+        axios.post("https://transaction-backend-4rk4.onrender.com/api/v1/account/transfer",{amount:amount,to:id},{headers:{Authorization:"Bearer "+localStorage.getItem("token")}}).then((res)=>{
             alert(res.data.message);
             navigate('/balance');
         }).catch((error)=>{
